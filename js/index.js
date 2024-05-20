@@ -1,5 +1,4 @@
 var isOpen = false;
-var SkillsHTML = "https://madhamanchiharsha.github.io/pages/skills.html"
 function openOrCloseNav() {
     isOpen = !isOpen
     console.log(isOpen)
@@ -17,6 +16,6 @@ function openOrCloseNav() {
 
 function onClickOfTechStack(html){
   var SkillsHTML = document.getElementById("main-content");
-  SkillsHTML.setAttribute('src', SkillsHTML)
+  SkillsHTML.setAttribute('src', "https://madhamanchiharsha.github.io/pages/skills.html")
   var header = document.getElementById("page-title").innerHTML = "Exposure on Technologies"
 }
