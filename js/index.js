@@ -13,3 +13,8 @@ function openOrCloseNav() {
     document.getElementById("main-content").style.marginLeft = "10vw";
   }
 }
+
+function onClickOfTechStack(){
+  var SkillsHTML = document.getElementById("main-content");
+  SkillsHTML.setAttribute('src',"https://madhamanchiharsha.github.io/pages/skills.html")
+}
