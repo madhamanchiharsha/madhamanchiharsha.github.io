@@ -17,6 +17,6 @@ function openOrCloseNav() {
 
 function onClickOfTechStack(html){
   var SkillsHTML = document.getElementById("main-content");
-  SkillsHTML.setAttribute('src',)
+  SkillsHTML.setAttribute('src', SkillsHTML)
   var header = document.getElementById("page-title").innerHTML = "Exposure on Technologies"
 }
