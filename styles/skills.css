@@ -3,14 +3,14 @@
     align-items: center;
 }
 
-div.tech {
+div#tech {
     padding: 10px;
     font-size: 20px;
     border: 2px solid aliceblue;
     margin: 2px;
 }
 
-div.tech:hover {
+div#tech:hover {
     font-size: 24px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
