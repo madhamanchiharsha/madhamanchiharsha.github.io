@@ -59,6 +59,7 @@ body {
     color: white;
     padding: 10px 15px;
     border: none;
+    border-radius: 5px;
   }
   
   .openbtn:hover {
