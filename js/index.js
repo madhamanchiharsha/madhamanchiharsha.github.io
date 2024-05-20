@@ -15,9 +15,13 @@ function openOrCloseNav() {
 }
 
 function onClickOfTechStack(html){
-  var header = document.getElementById("page-title").innerHTML = "Exposure on Technologies"
   var SkillsHTML = document.getElementById("main-content");
-  var clonedDomElement = SkillsHTML.cloneNode(true);
-  clonedDomElement.setAttribute('src', "https://madhamanchiharsha.github.io/pages/skills.html")
-  SkillsHTML.parentNode.removeChild(clonedDomElement);
+  SkillsHTML.setAttribute('src', "https://madhamanchiharsha.github.io/pages/skills.html");
+  var header = document.getElementById("page-title").innerHTML = "Exposure on Technologies";
+}
+
+function onClickAbout(){
+  var SkillsHTML = document.getElementById("main-content");
+  SkillsHTML.setAttribute('src', "https://madhamanchiharsha.github.io/pages/aboutMe.html");
+  var header = document.getElementById("page-title").innerHTML = "About Harsha Madhamanchi";
 }
