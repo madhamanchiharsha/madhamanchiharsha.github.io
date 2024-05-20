@@ -3,15 +3,37 @@
     align-items: center;
 }
 
-div#tech {
-    padding: 10px;
-    font-size: 20px;
-    border: 2px solid aliceblue;
+div.tech {
+    padding: 10px 10px 10px 3vw;
+    border: 2px solid rgb(186, 213, 237);
+    background-color: aliceblue;
     margin: 2px;
+    border-radius: 5px;
 }
 
-div#tech:hover {
-    font-size: 24px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+div.tech:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
+    
 }
 
+div.tech:hover #tech-title{
+    font-size: 24px;    
+}
+
+
+
+div.tech:hover #tech-summary{
+    font-size: 20px;
+
+}
+
+#tech-summary {
+    display:none;
+    font-size: 18px;
+    padding-top: 1vw;
+}
+
+#tech-title {
+    font-size: 22px;
+    font-weight: 500;
+}
