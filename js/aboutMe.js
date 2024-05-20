@@ -4,7 +4,7 @@ let isSetIntervelOn = false;
 window.onload = function()
 { 
   console.log("triggered");
-  showSlides (slideIndex)
+  showSlides()
   setInterval(showSlides,5000);
   
 }
