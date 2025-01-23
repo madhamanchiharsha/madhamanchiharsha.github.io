@@ -6,7 +6,7 @@ document.addEventListener('click', function(event) {
   // const iframeDoc = iFrame.contentDocument || iFrame.contentWindow.document;
 
   // Check if the click was outside the 'myDiv' element
-  if (!mySidebar.contains(event.target) && !openbtn.contains(event.target) && !iFrame.contains(event.target)) {
+  if (!mySidebar.contains(event.target) && !openbtn.contains(event.target) && iFrame.contains(event.target)) {
     console.log('hello');
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("header").style.marginLeft= "0";
@@ -17,20 +17,14 @@ function openOrCloseNav() {
   var screenWidth = window.innerWidth;
     var valueToPass;
 
-    // Check screen size and set different values
-    if (screenWidth <= 600) {
-        valueToPass = "Mobile View";
-    } else if (screenWidth <= 1024) {
-        valueToPass = "Tablet View";
-    }
     isOpen = !isOpen
-    console.log(isOpen)
+    console.log(screenWidth,valueToPass,isOpen)
     if(isOpen & screenWidth <= 600){
     document.getElementById("mySidebar").style.width = "12em";
     document.getElementById("header").style.marginLeft = "12em";
     document.getElementById("header").style.transition = "12em";
     //document.getElementById("main-content").style.marginLeft = "0vw";
-  } else if (isOpen & screenWidth <= 1024) {
+  } else if (isOpen & screenWidth >= 1024) {
     document.getElementById("mySidebar").style.width = "20em";
     document.getElementById("header").style.marginLeft = "20em";
     document.getElementById("header").style.transition = "20em";

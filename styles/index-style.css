@@ -124,7 +124,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1024px)  and (min-resolution: 2dppx) {
+@media only screen and (min-width: 1024px) {
   body {
     font-family: "Lato", sans-serif;
   }
@@ -140,7 +140,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   
   .sidebar a {
