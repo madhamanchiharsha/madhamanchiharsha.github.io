@@ -40,12 +40,18 @@ function onClickOfTechStack(html){
   var SkillsHTML = document.getElementById("main-content");
   SkillsHTML.setAttribute('src', "https://madhamanchiharsha.github.io/pages/skills.html");
   var header = document.getElementById("page-title").innerHTML = "Exposure on Technologies";
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("openbtn").style.marginLeft= "0";
+
 }
 
 function onClickOfContact(html){
   var SkillsHTML = document.getElementById("main-content");
   SkillsHTML.setAttribute('src', "./pages/contact.html");
   var header = document.getElementById("page-title").innerHTML = "You can reach out to me &#128516;";
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("openbtn").style.marginLeft= "0";
+
 }
 
 
@@ -53,4 +59,7 @@ function onClickAbout(){
   var SkillsHTML = document.getElementById("main-content");
   SkillsHTML.setAttribute('src', "https://madhamanchiharsha.github.io/pages/aboutMe.html");
   var header = document.getElementById("page-title").innerHTML = "About Harsha Madhamanchi";
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("openbtn").style.marginLeft= "0";
+
 }
