@@ -103,6 +103,7 @@ body {
     display: flex;
     margin-bottom: 1vw;
     transition: .5s;
+    margin-left: ;
   }
 
   #page-title {

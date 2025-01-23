@@ -22,11 +22,11 @@
   
   /* Slideshow container */
   .slideshow-container {
-    max-width: 1000px;
+    /* max-width: 1000px;
     width: 55vw;
     height: 51vh;
     position: relative;
-    margin: auto;
+    margin: auto; */
   }
   
   /* Hide the images by default */
