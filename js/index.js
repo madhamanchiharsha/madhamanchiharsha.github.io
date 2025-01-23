@@ -3,10 +3,10 @@ document.addEventListener('click', function(event) {
   const mySidebar = document.getElementById('mySidebar');
   const openbtn = document.querySelector('.openbtn');
   const iFrame = document.getElementById('main-content');
-  //const iframeDoc = iFrame.contentDocument || iFrame.contentWindow.document;
+  // const iframeDoc = iFrame.contentDocument || iFrame.contentWindow.document;
 
   // Check if the click was outside the 'myDiv' element
-  if (!mySidebar.contains(event.target) && !openbtn.contains(event.target) && !iframeDoc.contains(event.target)) {
+  if (!mySidebar.contains(event.target) && !openbtn.contains(event.target) && !iFrame.contains(event.target)) {
     console.log('hello');
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("header").style.marginLeft= "0";
