@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<head>  
-    <script src="./js/index.js"></script>
-    <link rel="stylesheet" href="./styles/index-style.css">
-    <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, user-scalable=no"
-  />
-    <title> About Harsha Madhamanchi </title>
+
+<head>
+  <script src="./js/index.js"></script>
+  <link rel="stylesheet" href="./styles/index-style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title> About Harsha Madhamanchi </title>
 </head>
+
 <body>
-    <div id="mySidebar" class="sidebar">
-        <button onclick='onClickAbout()'>About-Me</button>
-        <a href="https://www.linkedin.com/in/harsha-madhamanchi-575869119" target="_blank">LinkedIn</a>
-        <a href="https://github.com/madhamanchiharsha" target="_blank">Github</a>
-        <button onclick='onClickOfTechStack()'>Tech-Stack</button>
-        <a href="#">Contact</a>
-      </div>
-    <div id="main">
-        <div id="header"><button class="openbtn" onclick="openOrCloseNav()">☰</button> <div id="page-title">About Harsha Madhamanchi</div></div>
-        <embed id="main-content" type="text/html" src="./pages/aboutMe.html"></embed>
-    </div>
+  <div id="mySidebar" class="sidebar">
+    <button onclick='onClickAbout()'>About-Me</button>
+    <a href="https://www.linkedin.com/in/harsha-madhamanchi-575869119" target="_blank">LinkedIn</a>
+    <a href="https://github.com/madhamanchiharsha" target="_blank">Github</a>
+    <button onclick='onClickOfTechStack()'>Tech-Stack</button>
+    <button onclick='onClickOfContact()'>Contact</button>
+  </div>
+  <div id="main">
+    <div id="header"><button class="openbtn" onclick="openOrCloseNav()">☰</button> </div>
+    <div id="page-title">About Harsha Madhamanchi</div>
+    <iframe id="main-content" frameborder="0" scrolling="auto" type="text/html" src="./pages/aboutMe.html"></iframe>
+  </div>
 
 </body>
