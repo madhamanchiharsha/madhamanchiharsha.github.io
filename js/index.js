@@ -9,7 +9,7 @@ document.addEventListener('click', function(event) {
   if (!mySidebar.contains(event.target) && !openbtn.contains(event.target) && iFrame.contains(event.target)) {
     console.log('hello');
     document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("header").style.marginLeft= "0";
+    document.getElementById("openbtn").style.marginLeft= "0";
     isOpen=false;
   }
 });
@@ -21,17 +21,17 @@ function openOrCloseNav() {
     console.log(screenWidth,valueToPass,isOpen)
     if(isOpen & screenWidth <= 600){
     document.getElementById("mySidebar").style.width = "12em";
-    document.getElementById("header").style.marginLeft = "12em";
-    document.getElementById("header").style.transition = "12em";
+    document.getElementById("openbtn").style.marginLeft = "9em";
+    //document.getElementById("openbtn").style.transition = "12em";
     //document.getElementById("main-content").style.marginLeft = "0vw";
   } else if (isOpen & screenWidth >= 1024) {
     document.getElementById("mySidebar").style.width = "20em";
-    document.getElementById("header").style.marginLeft = "20em";
-    document.getElementById("header").style.transition = "20em";
+    document.getElementById("openbtn").style.marginLeft = "15.5em";
+    //document.getElementById("openbtn").style.transition = "";
   }
   else {
     document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("header").style.marginLeft= "0";
+    document.getElementById("openbtn").style.marginLeft= "0";
     //document.getElementById("main-content").style.marginLeft = "10vw";
   }
 }
