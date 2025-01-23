@@ -1,5 +1,10 @@
 <link rel="stylesheet" href="../styles/skills.css">
 <script src="../js/skills.js"></script>
+<script>
+    document.addEventListener('click', function(event) {
+      window.parent.postMessage('clickInsideIframe', '*');
+    });
+  </script>
 <div id="skills">
     <div class="tech" onclick="onClickToViewSkillDetails(0)">
         <div id="tech-title">1.Core Java</div>

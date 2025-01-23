@@ -1,4 +1,9 @@
 <link rel="stylesheet" href="../styles/contact.css">
+<script>
+    document.addEventListener('click', function(event) {
+      window.parent.postMessage('clickInsideIframe', '*');
+    });
+  </script>
 <table>
     <tr class="email">
         <td>Email</td>
