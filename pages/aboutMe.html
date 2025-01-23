@@ -1,6 +1,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../styles/aboutMe.css">
 <script src="../js/aboutMe.js"></script>
+<script>
+  document.addEventListener('click', function(event) {
+    window.parent.postMessage('clickInsideIframe', '*');
+  });
+</script>
 <div id="root-about-me">
     <div id="details">
 <div id="hello">Hello, I am Harsha Madhamanchi, in few points what i am :)</div>
