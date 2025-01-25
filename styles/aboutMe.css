@@ -20,15 +20,6 @@
   
   * {box-sizing:border-box}
   
-  /* Slideshow container */
-  .slideshow-container {
-    /* max-width: 1000px;
-    width: 55vw;
-    height: 51vh;
-    position: relative;
-    margin: auto; */
-  }
-  
   /* Hide the images by default */
   .mySlides {
     display: none;
@@ -118,7 +109,7 @@
   /* Slideshow container */
   .slideshow-container {
     max-width: 1000px;
-    width: 55vw;
+    width: 60vw;
     height: 51vh;
     position: relative;
     margin: auto;

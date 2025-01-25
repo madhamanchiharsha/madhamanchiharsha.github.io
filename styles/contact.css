@@ -34,6 +34,8 @@
 
 } */
 
+/* For laptop */
+@media only screen and (min-width: 1024px) {
 table {
     margin-left: auto;
     margin-right: auto;
@@ -53,3 +55,29 @@ table {
         }
     }
 }
+}
+/* For mobile */
+@media only screen and (max-width: 1024px) {
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5em;
+        td {
+            padding-bottom: 10px;
+            a {
+                text-decoration: none;
+            }
+            .company-name {
+                margin-left: 2em;
+            }
+            .mobile-value {
+                margin-left: 2em;
+            }
+            .email-value{
+                margin-left: 2em;
+            }
+        }
+    }
+    }
+    
+    
