@@ -36,12 +36,20 @@ function openOrCloseNav() {
 
 function onClickOfTechStack(html){
   var SkillsHTML = document.getElementById("main-content");
-  SkillsHTML.setAttribute('src', "https://madhamanchiharsha.github.io/pages/skills.html");
+  SkillsHTML.setAttribute('src', "./pages/skills.html");
   var header = document.getElementById("page-title").innerHTML = "Exposure on Technologies";
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("openbtn").style.marginLeft= "0";
   isOpen = false
+}
 
+function onClickOfExperience(){
+  var SkillsHTML = document.getElementById("main-content");
+  SkillsHTML.setAttribute('src', "./pages/experience.html");
+  var header = document.getElementById("page-title").innerHTML = "My experience in software industry";
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("openbtn").style.marginLeft= "0";
+  isOpen = false
 }
 
 function onClickOfContact(html){

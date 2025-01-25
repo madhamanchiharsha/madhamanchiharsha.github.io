@@ -138,7 +138,7 @@ body {
     margin: 5px;
     height: 100%;
     margin-bottom: 0px ;
-    overflow: hidden;
+    
   }
   
   .sidebar {
@@ -251,6 +251,7 @@ body {
     font-size: 1.6em;
     vertical-align: bottom;
     text-align: center;
+    margin-bottom: 2em;
   }
 
   /* body {
