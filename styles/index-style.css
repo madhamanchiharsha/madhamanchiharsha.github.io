@@ -4,6 +4,10 @@ body {
     margin: 5px !important;
     overflow: hidden;
   }
+
+  #footer{
+    margin: 2em;
+  }
   
   .sidebar {
     height: 100vh;
