@@ -109,7 +109,6 @@ body {
 
   #header {
     display: flex;
-    margin-bottom: 1vw;
     transition: .5s;
     margin-left: 0.5em;
 
@@ -247,7 +246,6 @@ body {
 
   #header {
     display: flex;
-    margin-bottom: 1vw;
     transition: .5s;
   }
 
@@ -256,7 +254,7 @@ body {
     font-size: 1.6em;
     vertical-align: bottom;
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
 
   /* body {
