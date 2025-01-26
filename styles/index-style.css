@@ -3,6 +3,8 @@ body {
     font-family: "Lato", sans-serif;
     margin: 5px !important;
     overflow: auto;
+    background-color: #444444;
+    color: aliceblue;
   }
 
   #footer{
@@ -71,30 +73,12 @@ body {
     transition: .5s;
   }
   
-  #openbtn:hover {
-    background-color: #444;
-  }
-  
   #main {
     transition: margin-left .5s;
     padding: 8px;
     height: 100%;
   }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-    #main-content {
-      height: 100vh;
-      margin-left: 0%;
-    }
-    
-  }
 
-  body {
-    min-height: 100%;
-  }
 
   #main-content {
     display: flex;
@@ -121,18 +105,6 @@ body {
     text-align: center;
     margin-top: 2em;
   }
-
-  /* body {
-    background-image: url("../images/tech-1.jpg ");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  } */
-
-  body {
-    background-color: #f1f1f1;
-    
-  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -141,7 +113,8 @@ body {
     margin: 5px;
     height: 100%;
     margin-bottom: 0px ;
-    
+    background-color: #444444;
+    color: aliceblue;
   }
   
   .sidebar {
@@ -210,9 +183,6 @@ body {
     position:fixed;
   }
   
-  #openbtn:hover {
-    background-color: #444;
-  }
   
   #main {
     transition: margin-left .5s;
@@ -229,10 +199,6 @@ body {
       margin-left: 0%;
     }
     
-  }
-
-  body {
-    min-height: 100%;
   }
 
   #main-content {
@@ -257,14 +223,4 @@ body {
     margin-bottom: 1.5em;
   }
 
-  /* body {
-    background-image: url("../images/tech-1.jpg ");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  } */
-
-  body {
-    background-color: #f1f1f1;
-  }
 }

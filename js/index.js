@@ -49,6 +49,7 @@ function onClickOfExperience(){
   var header = document.getElementById("page-title").innerHTML = "My experience in software industry";
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("openbtn").style.marginLeft= "0";
+  document.body.style.backgroundImage = "";
   isOpen = false
 }
 
@@ -58,6 +59,7 @@ function onClickOfContact(html){
   var header = document.getElementById("page-title").innerHTML = "You can reach out to me &#128516;";
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("openbtn").style.marginLeft= "0";
+  document.body.style.backgroundImage = "";
   isOpen = false
 }
 
@@ -68,5 +70,6 @@ function onClickAbout(){
   var header = document.getElementById("page-title").innerHTML = "About Harsha Madhamanchi";
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("openbtn").style.marginLeft= "0";
+  document.body.style.backgroundImage = "";
   isOpen = false
 }

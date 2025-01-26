@@ -1,13 +1,21 @@
 #skills {
     vertical-align: middle;
+    width: 100%;  
     align-items: center;
+    background-image: url(../images/tech-1.jpg);
+    background-size: cover;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    border-radius: 1em;
+    color: aliceblue;
 }
 
 div.tech {
     padding: 10px 10px 10px 3vw;
     border: 2px solid rgb(186, 213, 237);
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     min-height: 4vh;
+    color: aliceblue;
     margin: 8px;
     border-radius: 5px;
 }
@@ -39,3 +47,4 @@ div.tech:hover #tech-summary{
     font-size: 22px;
     font-weight: 500;
 }
+
