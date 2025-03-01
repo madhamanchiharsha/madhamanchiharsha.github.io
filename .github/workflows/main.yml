@@ -34,4 +34,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd madhamanchiharsha.github.io
-          ng deploy --repo=https://github.com/<username>/<repositoryname>.git --name="Your Git Username" --email=your.mail@example.org 
+          ng deploy --name="madhamanchiharsha" --email="harshavardhanm70@gmail.com" 
