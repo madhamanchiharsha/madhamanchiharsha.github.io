@@ -22,7 +22,6 @@ jobs:
           cd dist
           npm link
           cd ..
-          cd ..
           npm install -g @angular/cli
           ng new your-angular-project --defaults
           cd your-angular-project
