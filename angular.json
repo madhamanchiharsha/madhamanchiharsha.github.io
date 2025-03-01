@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "madhamanchiharsha.github.io": {
+      
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
