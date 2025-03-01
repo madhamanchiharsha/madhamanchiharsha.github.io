@@ -15,28 +15,35 @@ jobs:
         with:
           node-version: 22
 
-      - name: Prepare
-        run: |
-          npm install
-          npm run ng -- build --base-href="/madhamanchiharsha.github.io/"
-          cd ./dist
-          npm link
-          cd ./../..
-          pwd
-          ls
-          npm install -g @angular/cli
-          pwd
-          ls -la
-          cd madhamanchiharsha.github.io
-          # ng build --base-href="https://madhamanchiharsha.github.io/madhamanchiharsha.github.io/"
-          npm link angular-cli-ghpages
-          ng add angular-cli-ghpages
+      # - name: Prepare
+      #   run: |
+      #     npm install
+      #     npm run ng -- build --base-href="/madhamanchiharsha.github.io/"
+      #     cd ./dist
+      #     npm link
+      #     cd ./../..
+      #     pwd
+      #     ls
+      #     npm install -g @angular/cli
+      #     pwd
+      #     ls -la
+      #     cd madhamanchiharsha.github.io
+      #     # ng build --base-href="https://madhamanchiharsha.github.io/madhamanchiharsha.github.io/"
+      #     npm link angular-cli-ghpages
+      #     ng add angular-cli-ghpages
 
-      - name: Deploy
+      # - name: Deploy
+      #   env:
+      #     publish-branch: gh-pages
+      #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      #   run: |
+      #     pwd
+      #     ls
+      #     ng deploy --name="madhamanchiharsha" --email="harshavardhanm70@gmail.com" 
+      - name: Build Angular project
+        run: npm run build -- --prod
+
+      - name: Deploy to GitHub Pages
+        run: npx angular-cli-ghpages --dir=dist/madhamanchiharsha.github.io  # Replace <your-project-name> with the actual name of your Angular project
         env:
-          publish-branch: gh-pages
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          pwd
-          ls
-          ng deploy --name="madhamanchiharsha" --email="harshavardhanm70@gmail.com" 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
