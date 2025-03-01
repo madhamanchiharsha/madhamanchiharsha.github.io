@@ -43,7 +43,7 @@ jobs:
       - name: Build Angular project
         run: |
          npm install
-         npm run build -- --configuration production
+         npm run build -- --configuration production --base-href /madhamanchiharsha.github.io/
          npm ng add angular-cli-ghpages
 
       - name: Deploy to GitHub Pages
