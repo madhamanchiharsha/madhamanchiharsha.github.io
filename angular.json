@@ -19,6 +19,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/madhamanchiharsha.github.io",
+            "baseHref": "/madhamanchiharsha.github.io/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
