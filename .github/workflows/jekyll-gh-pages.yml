@@ -63,7 +63,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/madhamanchiharsha.github.io  # Replace with your app's build output folder
+          folder: dist/madhamanchiharsha.github.io/browser  # Replace with your app's build output folder
           branch: gh-pages
           target-folder: docs
           token: ${{ secrets.TOKEN }}
