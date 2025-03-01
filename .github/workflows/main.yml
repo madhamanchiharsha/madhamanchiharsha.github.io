@@ -43,7 +43,7 @@ jobs:
       - name: Build Angular project
         run: |
          npm install
-         npm run build -- --prod
+         npm run build -- --configuration production
 
       - name: Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/madhamanchiharsha.github.io  # Replace <your-project-name> with the actual name of your Angular project
