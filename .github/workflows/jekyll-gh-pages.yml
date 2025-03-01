@@ -65,6 +65,7 @@ jobs:
         with:
           folder: dist/madhamanchiharsha.github.io  # Replace with your app's build output folder
           branch: gh-pages
+          target-folder: docs
           token: ${{ secrets.TOKEN }}
           clean: true
       - name: Deploy to GitHub Pages
