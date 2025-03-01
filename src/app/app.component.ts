@@ -4,6 +4,7 @@ import { KnowHarshaModule } from './know-harsha/know-harsha.module';
 import { SidebarComponent } from './know-harsha/sidebar/sidebar.component';
 import { HeaderComponent } from './know-harsha/header/header.component';
 import { GlobalService } from './know-harsha/global.service';
+import { AboutMeComponent } from './know-harsha/about-me/about-me.component';
 
 @Component({
   selector: 'app-root',
