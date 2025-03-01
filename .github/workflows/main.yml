@@ -34,7 +34,7 @@ jobs:
       - name: Deploy
         env:
           publish-branch: gh-pages
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           pwd
           ls
