@@ -27,14 +27,13 @@ jobs:
           npm link
           pwd
           ls
-          cd ./../..
+          cd ./..
           pwd
           ls
           npm install -g @angular/cli
           pwd
           ls
-          ng new your-angular-project --defaults
-          cd your-angular-project
+          cd madhamanchiharsha.github.io
           npm link angular-cli-ghpages
           ng add angular-cli-ghpages
 
