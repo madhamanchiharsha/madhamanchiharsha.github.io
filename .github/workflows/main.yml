@@ -19,7 +19,6 @@ jobs:
         run: |
           npm install
           npm run build
-          ng
           pwd
           ls
           cd ./dist
@@ -28,16 +27,16 @@ jobs:
           npm link
           pwd
           ls
-          # cd ./..
-          # pwd
-          # ls
+          cd ./../..
+          pwd
+          ls
           npm install -g @angular/cli
           pwd
           ls
           ng new your-angular-project --defaults
-          # cd your-angular-project
-          # npm link angular-cli-ghpages
-          # ng add angular-cli-ghpages
+          cd your-angular-project
+          npm link angular-cli-ghpages
+          ng add angular-cli-ghpages
 
       - name: Deploy
         if: github.ref == 'refs/heads/master'
