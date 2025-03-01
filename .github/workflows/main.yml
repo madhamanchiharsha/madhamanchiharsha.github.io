@@ -48,4 +48,4 @@ jobs:
       - name: Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/madhamanchiharsha.github.io  # Replace <your-project-name> with the actual name of your Angular project
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
