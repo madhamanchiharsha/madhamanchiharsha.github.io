@@ -60,5 +60,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/madhamanchiharsha.github.io  # Replace with your app's build output folder
-          branch: master
+          branch: gh-pages
           clean: true
