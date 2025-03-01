@@ -32,10 +32,10 @@ jobs:
           ng add angular-cli-ghpages
 
       - name: Deploy
-        if: github.ref == 'refs/heads/master'
         env:
+          publish-branch: gh-pages
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pwd
           ls
-          ng deploy --repo=https://github.com/madhamanchiharsha/madhamanchiharsha.github.io.git --name="madhamanchiharsha" --email="harshavardhanm70@gmail.com" 
+          ng deploy --name="madhamanchiharsha" --email="harshavardhanm70@gmail.com" 
