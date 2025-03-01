@@ -18,7 +18,7 @@ jobs:
       - name: Prepare
         run: |
           npm install
-          npm run build --configuration production --base-href="/madhamanchiharsha.github.io/"
+          npm run build -- --configuration production --base-href="/madhamanchiharsha.github.io/"
           cd dist
           npm link
           cd ..
