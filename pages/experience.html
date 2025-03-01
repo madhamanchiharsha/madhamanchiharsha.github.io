@@ -1,5 +1,10 @@
 <link rel="stylesheet" href="../styles/experience.css">
 <script src="../js/skills.js"></script>
+<script>
+    document.addEventListener('click', function(event) {
+      window.parent.postMessage('clickInsideIframe', '*');
+    });
+  </script>
 <div id="experience">
     <div class="company">FICO (<b>F</b>air <b>I</b>ssac <b>CO</b>rporation)</div>
     <div class="role-name"> Software Engineer II</div>
@@ -10,23 +15,52 @@
                 team, and make sure my deliverable are delivered on or before time.
             </li>
             <li>
-                Apart from assigned work assigned, what i focused on is , How to improve the current process we follow in team, and also what could be the next best potential thing for the product.
+                Apart from assigned work, what i focused on is , How to improve the current process we follow in team, and also what could be the next best potential thing for the product.
                 <ul>
                     <li>
-                        I saw an improvement that can be achieved throught simple automation, Like basically we have good number of micor services,
+                        I saw an improvement that can be achieved throught simple automation, Like basically we have good number of micorservices,
                         the responsibility of some of microservices would be with my team, so I have created a script which would help team upfront about any blackduck issues, this will help tracking and prioritising issues in the same sprint which would help in smooth transition to 
                         QA to CQA and then to PROD environemnts.
                         with this being in place we improved our deliveries by prioritsing issues upfront. Basically <b>the script will send message to microsoft teams scrum channel with latest issues.</b>                
                     </li>
                     <li>
                         We have around some 90+ microservices in my business unit and my team is responsible for around 15+ microservices. belive me we have tons of documentation, for any one to understand
-                        the microservice to a certain level, but the thing here is it is in confluenece and some times its hard to get what we need browsing throught the 3-4 documents whcih we have for that micro service.
-                        So at initial though i had like cant i create a simple <b>RAG</b> which would help in doing this, like if we frame our question pin point to what we need exactly the <b>RAG system</b> would be able to help us get
+                        the microservice to a certain level, but the thing here is, it is in confluenece and some times its hard to get what we need browsing throught that 3-4 documents whcih we have for that micro service.
+                        So at initial though i had like cant i create a simple <b>RAG</b> which would help me in doing this, like if we frame our question pin point to what we need exactly, the <b>RAG system</b> would be able to help us get
                         the relevant information and summarise it. 
                     </li>
                 </ul>
             </li>
         </ul>
     </div>
+    <div class="company"><b>Philips</b></div>
+    <div class="role-name">Senior Software Devops Engineer</div>
+    <div class="describe">
+        <ul>
+            <li>
+                In my devops role i have got an opportunity to look at things from a different perspective than developer.
+                I have been part of central deveops team for my department which is ICAP (Platform for Advanced visualization)
+            </li>
+            <li>
+                what i used to do and my key achievements are.
+                <ul>
+                    <li>
+                        I started to see that having structured and restrictive processes is more important than just expecting people to know the right actions and boundaries. 
+                    </li>
+                    <li>
+                        Worked on creating workflows which helped the development teams to manitain better code quality.
+                    </li>
+                    <li>
+                        My major achievement i can say is modularsing and rewiring things into modules in the terraform scripts which are used to create environments.
+                        which helped in creating and removing the environments. around 60% of manula intervention have been removed, which minimised human errors. 
+                    </li>
+                    <li>
+                        Been key player by showing great collaboration across development teams, and solving their infrastructure related issues on time, which help the team delivering things on or before time.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
 </div>
 <!-- company -> role -> what you did -->

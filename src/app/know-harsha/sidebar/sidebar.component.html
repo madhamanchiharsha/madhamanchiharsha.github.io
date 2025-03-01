@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<button class="hamburger" [class.active]="isSidebarOpen" (click)="toggleSidebar()">
+    <span></span>
+  </button>
+  
+  <div class="overlay" [class.visible]="isSidebarOpen" (click)="closeSidebar()"></div>
+  
+  <div class="sidebar" [class.open]="isSidebarOpen">
+    <!-- <div class="sidebar-header">
+      <div class="logo"><i class="fa fa-times"></i>
+      </div>
+      <div class="status-badge"> Exit </div>
+    </div> -->
+    <ul>
+      <li class="nav-item exit-btn" (click)="closeSidebar()">
+        <div class="nav-link exit-btn">
+            <div class="icon fa fa-times"></div>
+            <span >Exit</span>    
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="navigateTo('aboutMe')">
+          <div class="icon">👤</div>
+          <span>About Me</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://www.linkedin.com/in/harsha-madhamanchi-575869119" target="_blank" class="nav-link" (click)="closeSidebar()">
+          <div class="icon fa">&#xf08c;</div>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="https://github.com/madhamanchiharsha" target="_blank" class="nav-link" (click)="closeSidebar()">
+          <div class="icon fa" style="color: black;">&#xf09b;</div>
+          <span>Github</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" (click)="navigateTo('aboutMe')">
+          <div class="icon">🛠️</div>
+          <span>Tech-Stack</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" (click)="navigateTo('aboutMe')">
+          <div class="icon">💻</div>
+          <span>Experience</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" (click)="navigateTo('aboutMe')">
+          <div class="icon">🚀</div>
+          <span>Project</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" (click)="navigateTo('aboutMe')">
+          <div class="icon">📱</div>
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <div [class.shifted]="isSidebarOpen">
+    <ng-content></ng-content>
+  </div>
