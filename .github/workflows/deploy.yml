@@ -61,4 +61,5 @@ jobs:
         with:
           folder: dist/madhamanchiharsha.github.io  # Replace with your app's build output folder
           branch: gh-pages
+          token: ${{ secrets.TOKEN }}
           clean: true
