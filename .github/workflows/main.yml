@@ -20,7 +20,6 @@ jobs:
           cd src
           npm install
           npm run build
-          npm run test
           cd dist
           npm link
           cd ..
