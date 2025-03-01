@@ -18,7 +18,7 @@ jobs:
       - name: Prepare
         run: |
           npm install
-          npm run build
+          npm run ng -- build --base-href="https://madhamanchiharsha.github.io/madhamanchiharsha.github.io/"
           cd ./dist
           npm link
           cd ./../..
@@ -28,6 +28,7 @@ jobs:
           pwd
           ls -la
           cd madhamanchiharsha.github.io
+          # ng build --base-href="https://madhamanchiharsha.github.io/madhamanchiharsha.github.io/"
           npm link angular-cli-ghpages
           ng add angular-cli-ghpages
 
