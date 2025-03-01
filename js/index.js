@@ -1,4 +1,14 @@
 var isOpen = false;
+
+// window.addEventListener('load', function() {
+//   var iframe = document.getElementById('main-content');
+  
+//   iframe.onload = function() {
+//     // Adjust iframe height based on its content
+//     iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+//   };
+// });
+
 window.addEventListener('message', function(event) {
   if (event.data === 'clickInsideIframe') {
     // You can handle the click event here

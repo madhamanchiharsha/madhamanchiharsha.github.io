@@ -8,6 +8,7 @@
     color: aliceblue;
   }
   #know-me{
+    padding-inline-start: 20px !important;
     line-height: 1.75;
   }
   #details {

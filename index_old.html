@@ -2,6 +2,7 @@
 
 <head>
   <script src="./js/index.js"></script>
+  
   <link rel="stylesheet" href="./styles/index-style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title> About Harsha Madhamanchi </title>
@@ -28,3 +29,22 @@
   </div>
 
 </body>
+
+<script>
+  var iframe = document.getElementById("main-content");
+  var parentDiv = document.getElementById('main');
+  console.log(iframe);
+  // Function to adjust iframe height and the body's height
+  function adjustBodyHeight() {
+      var iframeHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+      document.body.style.height = iframeHeight + 'px';
+      parentDiv.style.height = iframeHeight + 'px';
+      console.log(iframeHeight);
+  }
+
+  // Adjust body height when the iframe content is loaded
+  adjustBodyHeight();
+
+  // Optional: Continuously adjust if content inside iframe changes dynamically
+  setInterval(adjustBodyHeight, 1000);
+</script>

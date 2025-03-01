@@ -4,8 +4,8 @@
     align-items: center;
     background-image: url(../images/tech-1.jpg);
     background-size: cover;
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     border-radius: 1em;
     color: aliceblue;
 }
@@ -21,19 +21,17 @@ div.tech {
 }
 
 div.tech:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
-    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 div.tech:hover #tech-title{
-    font-size: 24px;    
+    font-size: 24px;
 }
 
 
 
 div.tech:hover #tech-summary{
     font-size: 20px;
-
 }
 
 #tech-summary {
