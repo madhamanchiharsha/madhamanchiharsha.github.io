@@ -27,9 +27,9 @@ jobs:
           npm link
           pwd
           ls
-          cd ./..
-          pwd
-          ls
+          # cd ./..
+          # pwd
+          # ls
           npm install -g @angular/cli
           pwd
           ls
