@@ -43,9 +43,9 @@ jobs:
       - name: Build Angular project
         run: |
          npm install
-         npm run build -- --configuration production --base-href /madhamanchiharsha.github.io/
+         npm run build -- --configuration production --base-href /madhamanchiharsha.github.io/ --
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/madhamanchiharsha.github.io  --name="madhamanchiharsha" --email="harshavardhanm70@gmail.com" --no-silent # Replace <your-project-name> with the actual name of your Angular project
+        run: npx angular-cli-ghpages --dir=dist/madhamanchiharsha.github.io/browser --name="madhamanchiharsha"  --email="harshavardhanm70@gmail.com" --no-silent # Replace <your-project-name> with the actual name of your Angular project
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
