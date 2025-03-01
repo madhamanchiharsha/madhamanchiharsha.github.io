@@ -19,19 +19,20 @@ jobs:
         run: |
           npm install
           npm run build
-          cd dist
-          npm link
-          cd ..
-          npm install -g @angular/cli
-          ng new your-angular-project --defaults
-          cd your-angular-project
-          npm link angular-cli-ghpages
-          ng add angular-cli-ghpages
+          # cd dist
+          # npm link
+          # cd ..
+          # npm install -g @angular/cli
+          # ng new your-angular-project --defaults
+          # cd your-angular-project
+          # npm link angular-cli-ghpages
+          # ng add angular-cli-ghpages
 
       - name: Deploy
         if: github.ref == 'refs/heads/master'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd madhamanchiharsha.github.io
+          pwd
+          # cd madhamanchiharsha.github.io
           ng deploy --repo=https://github.com/madhamanchiharsha/madhamanchiharsha.github.io.git --name="madhamanchiharsha" --email="harshavardhanm70@gmail.com" 
