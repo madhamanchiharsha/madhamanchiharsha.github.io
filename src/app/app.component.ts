@@ -8,7 +8,8 @@ import { AboutMeComponent } from './know-harsha/about-me/about-me.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet ,KnowHarshaModule, SidebarComponent, HeaderComponent],
+  standalone: true,
+  imports: [RouterOutlet, SidebarComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -7,12 +7,11 @@ import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
-    AboutMeComponent, 
-    SidebarComponent,
-    HeaderComponent
+    SidebarComponent
   ]
 })
 export class KnowHarshaModule { }
