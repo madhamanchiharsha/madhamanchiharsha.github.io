@@ -5,6 +5,9 @@ import { SidebarComponent } from "./know-harsha/sidebar/sidebar.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
 import { NgModule } from "@angular/core";
+import { ProfessionalComponent } from "./know-harsha/professional/professional.component";
+import { ContactComponent } from "./know-harsha/contact/contact.component";
+import { ProjectsComponent } from "./know-harsha/projects/projects.component";
 
 @NgModule({
     declarations: [
@@ -14,7 +17,10 @@ import { NgModule } from "@angular/core";
       BrowserModule,
       KnowHarshaModule,
       SidebarComponent, 
-      HeaderComponent
+      HeaderComponent,
+      ProfessionalComponent,
+      ContactComponent,
+      ProjectsComponent
       // Other modules here
     ]
   })

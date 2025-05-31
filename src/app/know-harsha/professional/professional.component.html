@@ -1,0 +1,48 @@
+<section class="professional-container">
+    <div class="header">
+      <p class="subtitle">My Professional Journey: Evolving Roles and Impact Across Companies</p>
+    </div>
+  
+    <div class="experience-timeline">
+      <div *ngFor="let exp of professionalExperience" class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="company-header">
+            <h2>{{exp.company}}</h2>
+            <span class="period">{{exp.period}}</span>
+          </div>
+          <h3 class="position">{{exp.position}}</h3>
+          <p class="description" [innerHTML]="exp.description"></p>
+          <div class="achievements">
+            <h4>Key Achievements:</h4>
+            <ul>
+              <li *ngFor="let achievement of exp.achievements" [innerHTML]="achievement" ></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="education-section">
+      <h2>Education</h2>
+      <div *ngFor="let edu of education" class="education-item">
+        <h3>{{edu.degree}}</h3>
+        <div class="college-name"><div (click)="openCollegeWebsite()" [innerHTML]="edu.institution"> </div><div>{{edu.year}}</div> </div>
+      </div>
+    </div>
+  
+    <!-- <div class="certifications-section">
+      <h2>Certifications</h2>
+      <div class="cert-container">
+        <div *ngFor="let cert of certifications" class="certification-item">
+          <div class="cert-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="cert-details">
+            <h3>{{cert.name}}</h3>
+            <p>{{cert.issuer}} - {{cert.year}}</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>

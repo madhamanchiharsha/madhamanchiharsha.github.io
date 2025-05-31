@@ -1,0 +1,17 @@
+ :root {
+    --primary-blue: #4B9CD3; /* Sky blue */
+    --denim: #6CA0DC
+}
+ .contact-container {
+     a {
+         text-decoration: none;
+         color: var(--denim) !important;
+     }
+     a:hover {
+         text-decoration: underline;
+     }
+     text-align: center;
+     margin-top: 2em;
+     font-size: 1.5em;
+     
+ }

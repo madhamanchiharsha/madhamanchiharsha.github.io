@@ -41,8 +41,8 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  navigateTo(location: any){
-    this._router.navigate([location]); 
+  navigateTo(location: string){
+    this._router.navigate([ location ]); 
     this.closeSidebar();
   }
 

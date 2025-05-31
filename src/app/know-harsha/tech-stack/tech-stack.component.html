@@ -1,0 +1,45 @@
+<!-- tech-stack.component.html -->
+<section class="tech-stack-container">
+    <div class="header">
+      <p class="subtitle">The tools and technologies I work with are</p>
+    </div>
+  
+    <div class="category-filter">
+      <button *ngFor="let category of categories" 
+              [class.active]="selectedCategory === category.id"
+              (click)="filterByCategory(category.id)">
+        {{category.name}}
+      </button>
+    </div>
+  
+    <div class="technologies-grid">
+      <div *ngFor="let tech of filteredTechnologies" class="tech-card">
+        <div class="tech-details">
+          <h3 style="background-color: #3498db; padding: 0.5rem; text-align: center; border-radius: 8px;">{{tech.name}}</h3>
+          <p class="tech-description">{{tech.description}}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="tech-stack-summary">
+      <h2>My Approach to Technology</h2>
+      <p>
+        I believe in choosing the right tool for the job. My core expertise lies in Angular and TypeScript for frontend development, 
+        with java and python forming my preferred backend stack. I'm continuously expanding my knowledge in cloud technologies 
+        and DevOps practices to deliver complete, scalable solutions.
+      </p>
+      <p>
+        I'm passionate about staying current with the latest developments in web technologies and regularly experiment with 
+        emerging tools to evaluate their potential for production use.
+      </p>
+    </div>
+  
+    <div class="currently-learning">
+      <h2>Currently Learning</h2>
+      <div class="learning-items">
+        <div class="learning-item">
+          <span>LangGraph</span>
+        </div>
+      </div>
+    </div>
+  </section>
