@@ -1,0 +1,54 @@
+<section class="section tech" id="stack">
+  <div class="wrap">
+    <div class="section-head" [appReveal]="0">
+      <span class="idx">03</span>
+      <span class="kicker">Tech Stack</span>
+    </div>
+
+    <div class="tech__top" [appReveal]="60">
+      <h2 class="section-title">
+        The tools I reach for —<br />and <em>why</em>.
+      </h2>
+      <p class="tech__intro">
+        I believe in choosing the right tool for the job, not the trendiest one.
+        My core is Angular and TypeScript on the front, Java and Python on the back,
+        and I keep widening into cloud and DevOps to ship complete, scalable systems.
+      </p>
+    </div>
+
+    <div class="tech__filter" role="group" aria-label="Filter technologies by category" [appReveal]="120">
+      @for (cat of categories; track cat.id) {
+        <button
+          type="button"
+          class="chip"
+          [class.is-active]="selected() === cat.id"
+          [attr.aria-pressed]="selected() === cat.id"
+          (click)="select(cat.id)"
+        >
+          {{ cat.name }}
+        </button>
+      }
+    </div>
+
+    <div class="tech__grid" aria-live="polite" aria-label="Technologies">
+      @for (t of visible(); track t.name) {
+        <article class="tcard">
+          <div class="tcard__top">
+            <h3 class="tcard__name">{{ t.name }}</h3>
+            <span class="tcard__tier" [attr.data-tier]="t.tier">{{ t.tier }}</span>
+          </div>
+          <p class="tcard__note">{{ t.note }}</p>
+          <span class="tcard__rule" aria-hidden="true"></span>
+        </article>
+      }
+    </div>
+
+    <div class="tech__learning" [appReveal]="100">
+      <span class="kicker">Currently exploring</span>
+      <div class="learn-pills">
+        <span class="learn-pill"><span class="pulse"></span>LangGraph</span>
+        <span class="learn-pill"><span class="pulse"></span>Agentic systems</span>
+      </div>
+    </div>
+  </div>
+</section>

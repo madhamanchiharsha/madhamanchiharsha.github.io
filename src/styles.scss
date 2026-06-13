@@ -1,37 +1,275 @@
-/* You can add global styles to this file, and also import other style files */
-/* styles.scss */
+/* =============================================================
+   Harsha Madhamanchi — Portfolio
+   "Through the Mist" — atmospheric dark editorial-tech system
+   ============================================================= */
+
 :root {
-    --primary-blue: #4B9CD3; /* Sky blue */
-    --secondary-blue: #75B9E6; /* Lighter sky blue */
-    --accent-blue: #1E88E5; /* Slightly deeper blue for accents */
-    --light-blue: #F0F9FF; /* Very light blue background */
-    --white: #FFFFFF;
-    --denim: #6CA0DC; /* Light denim blue */
-    --sidebar-width: 80vw; //for mobile
+  /* ---- Atmosphere: cool charcoal & mountain mist ---- */
+  --bg:            #0b0e13;   /* deep cool charcoal base          */
+  --bg-2:          #0e131a;   /* layered backdrop                 */
+  --surface:       #141a23;   /* card / panel                     */
+  --surface-2:     #1a212c;   /* raised card                      */
+  --line:          rgba(173, 196, 224, 0.10);  /* hairline border */
+  --line-strong:   rgba(173, 196, 224, 0.18);
+
+  /* ---- Ink (text) ---- */
+  --ink:           #eef2f7;   /* primary                          */
+  --ink-soft:      #aebac9;   /* secondary                        */
+  --ink-mute:      #6f7d8f;   /* tertiary / captions              */
+
+  /* ---- Ember accent (pulled from the red beanie) ---- */
+  --ember:         #e8623a;   /* primary warm accent              */
+  --ember-bright:  #f5895f;   /* hover / highlight                */
+  --ember-glow:    rgba(232, 98, 58, 0.30);
+
+  /* ---- Cool secondary (mist / forest) ---- */
+  --mist:          #7fa6c9;   /* cool slate-blue                  */
+  --moss:          #8fae8b;   /* muted sage for some tags         */
+
+  /* ---- Type ---- */
+  --display: 'Fraunces', 'Times New Roman', serif;
+  --sans:    'IBM Plex Sans', system-ui, sans-serif;
+  --mono:    'IBM Plex Mono', ui-monospace, monospace;
+
+  /* ---- Rhythm ---- */
+  --maxw: 1180px;
+  --gutter: clamp(1.25rem, 5vw, 5rem);
+  --nav-h: 4.5rem;
+  --radius: 14px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+body {
+  font-family: var(--sans);
+  font-weight: 400;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Atmospheric backdrop: drifting fog + grain, fixed behind everything ---- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(60rem 50rem at 78% -8%, rgba(232, 98, 58, 0.13), transparent 60%),
+    radial-gradient(50rem 50rem at 8% 12%, rgba(127, 166, 201, 0.12), transparent 55%),
+    radial-gradient(70rem 60rem at 50% 108%, rgba(127, 166, 201, 0.10), transparent 60%),
+    var(--bg);
+  animation: drift 26s var(--ease) infinite alternate;
+}
+
+/* film grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-2%, 1.5%, 0) scale(1.06); }
+}
+
+/* ============================ Typography ============================ */
+
+h1, h2, h3, h4 {
+  font-family: var(--display);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  font-optical-sizing: auto;
+}
+
+p { color: var(--ink-soft); }
+b, strong { color: var(--ink); font-weight: 600; }
+
+a { color: inherit; text-decoration: none; }
+
+/* Mono kicker / eyebrow / section index */
+.kicker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+/* ============================ Layout helpers ============================ */
+
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(5rem, 11vw, 9rem);
+  scroll-margin-top: var(--nav-h);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+  flex-wrap: wrap;
+}
+.section-head .idx {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.1em;
+}
+.section-title {
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+}
+.section-title em {
+  font-style: italic;
+  color: var(--ember);
+}
+
+/* ============================ Buttons & links ============================ */
+
+.btn {
+  --pad-y: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: var(--pad-y) 1.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease), background-color 0.3s var(--ease),
+              border-color 0.3s var(--ease), color 0.3s var(--ease), box-shadow 0.4s var(--ease);
+  will-change: transform;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--primary {
+  background: var(--ember);
+  color: #1a0c06;
+  box-shadow: 0 10px 30px -12px var(--ember-glow);
+}
+.btn--primary:hover {
+  background: var(--ember-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px -14px var(--ember-glow);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.btn--ghost:hover {
+  border-color: var(--ember);
+  color: var(--ember-bright);
+  transform: translateY(-2px);
+}
+
+/* animated underline link */
+.link-u {
+  position: relative;
+  color: var(--ink);
+  transition: color 0.3s var(--ease);
+}
+.link-u::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%; height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease);
+}
+.link-u:hover { color: var(--ember-bright); }
+.link-u:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* ============================ Scroll-reveal ============================ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================ Forms of polish ============================ */
+
+::selection { background: var(--ember); color: #1a0c06; }
+
+/* Skip link — first focusable element, hidden until focused */
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 200;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: var(--ember);
+  color: #1a0c06;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  transform: translateY(-150%);
+  transition: transform 0.3s var(--ease);
+}
+.skip-link:focus { transform: translateY(0); }
+
+:focus-visible {
+  outline: 2px solid var(--ember-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar { width: 11px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: #2a333f;
+  border-radius: 999px;
+  border: 3px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: #38434f; }
+html { scrollbar-color: #2a333f var(--bg); scrollbar-width: thin; }
+
+/* ============================ Reduced motion ============================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--light-blue);
-    color: #333;
-    overflow-x: hidden;
-  }
-  
-  h1 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: var(--primary-blue);
-    font-weight: 600;
-  }
-  
-  p {
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #445;
-  }
+  [data-reveal] { opacity: 1; transform: none; }
+}

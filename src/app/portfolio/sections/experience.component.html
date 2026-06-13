@@ -1,0 +1,58 @@
+<section class="section exp" id="experience">
+  <div class="wrap">
+    <div class="section-head" [appReveal]="0">
+      <span class="idx">02</span>
+      <span class="kicker">Experience</span>
+    </div>
+
+    <h2 class="section-title exp__title" [appReveal]="60">
+      A path through <em>roles</em><br />that kept widening.
+    </h2>
+
+    <ol class="timeline">
+      @for (role of roles; track role.position + role.period; let i = $index) {
+        <li class="tl-item" [appReveal]="i * 60">
+          <div class="tl-rail" aria-hidden="true">
+            <span class="tl-node"></span>
+          </div>
+
+          <article class="tl-card">
+            <header class="tl-head">
+              <div>
+                <h3 class="tl-company">{{ role.company }}</h3>
+                <p class="tl-position">{{ role.position }}</p>
+              </div>
+              <span class="tl-period">{{ role.period }}</span>
+            </header>
+
+            <p class="tl-summary">{{ role.summary }}</p>
+
+            <ul class="tl-achievements">
+              @for (item of role.achievements; track item) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+
+            <ul class="tl-tags">
+              @for (tag of role.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+          </article>
+        </li>
+      }
+    </ol>
+
+    <!-- Education -->
+    <div class="edu" [appReveal]="80">
+      <span class="kicker">Education</span>
+      <div class="edu__row">
+        <h3 class="edu__degree">M.Tech (Integrated) — Software Engineering</h3>
+        <button class="edu__inst link-u" type="button" (click)="openVit()">
+          Vellore Institute of Technology (VIT) ↗
+        </button>
+        <span class="edu__year">2020</span>
+      </div>
+    </div>
+  </div>
+</section>

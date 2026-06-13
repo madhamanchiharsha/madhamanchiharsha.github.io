@@ -1,36 +1,13 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { KnowHarshaModule } from './know-harsha/know-harsha.module';
-import { SidebarComponent } from './know-harsha/sidebar/sidebar.component';
-import { HeaderComponent } from './know-harsha/header/header.component';
-import { GlobalService } from './know-harsha/global.service';
+import { NavComponent } from './portfolio/nav/nav.component';
+import { FooterComponent } from './portfolio/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent, HeaderComponent],
+  imports: [RouterOutlet, NavComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
-
-  contentHolder: any;
-
-  
-  constructor(public _globalService: GlobalService){
-   
-  }
-  ngOnInit(): void {
-
-    // highlight the content whenever sidebaropens 
-    this.contentHolder = document.getElementById('content');
-    this._globalService.isSideBarOpen.subscribe((isSideBarOpen) => {
-      this.contentHolder?.classList.toggle('shifted');
-    })
- 
-  }
-
-  
-  
-
-}
+export class AppComponent {}
