@@ -5,7 +5,7 @@ import {
   OnDestroy,
   signal,
 } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 interface NavLink {
   id: string;
@@ -20,6 +20,7 @@ interface NavLink {
   styleUrl: './nav.component.scss',
 })
 export class NavComponent implements AfterViewInit, OnDestroy {
+  constructor(private router: Router) {}
   readonly links: NavLink[] = [
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
@@ -67,9 +68,18 @@ export class NavComponent implements AfterViewInit, OnDestroy {
   go(id: string, event: Event): void {
     event.preventDefault();
     this.menuOpen.set(false);
-    const el = document.getElementById(id);
-    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    el?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+
+    const scroll = () => {
+      const el = document.getElementById(id);
+      const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+      el?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    };
+
+    if (this.router.url === '/' || this.router.url.startsWith('/#')) {
+      scroll();
+    } else {
+      this.router.navigate(['/']).then(() => setTimeout(scroll, 80));
+    }
   }
 
   toggleMenu(): void {
