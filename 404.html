@@ -18,6 +18,16 @@
 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+  <!-- Restore SPA route after GitHub Pages 404 redirect -->
+  <script>
+    (function() {
+      var r = new URLSearchParams(window.location.search).get('r');
+      if (r) {
+        window.history.replaceState(null, '', r + window.location.hash);
+      }
+    })();
+  </script>
+
   <!-- Typography: Fraunces (editorial display) + IBM Plex Sans/Mono (engineering) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,5 +36,5 @@
 
 <body>
   <app-root></app-root>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-YYLTINPE.js" type="module"></script></body>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-Y257IZZ6.js" type="module"></script></body>
 </html>
