@@ -20,7 +20,7 @@ interface Project {
 export class ProjectsComponent {
   readonly projects: Project[] = [
     {
-      title: 'Developer Sherlock',
+      title: 'Developer Plugin',
       badge: 'Claude Code Plugin',
       description:
         'A Claude Code plugin that reads a Jira ticket, queries Confluence with contextually relevant keywords, understands multiple codebases simultaneously, and produces a structured developer briefing — where we stand, what the ticket is actually asking, acceptance criteria mapped to code surfaces, and concrete implementation recommendations.',
