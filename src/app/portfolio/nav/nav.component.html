@@ -16,7 +16,8 @@
           <span>{{ link.label }}</span>
         </a>
       }
-      <a class="nav__cta" href="#contact" (click)="go('contact', $event)">Let’s talk</a>
+      <a class="nav__blog" routerLink="/blog">Writing</a>
+      <a class="nav__cta" href="#contact" (click)="go('contact', $event)">Let's talk</a>
     </nav>
 
     <button
@@ -50,6 +51,10 @@
           <span class="sheet__label">{{ link.label }}</span>
         </a>
       }
+      <a class="sheet__link" routerLink="/blog" (click)="toggleMenu()" [style.--i]="links.length">
+        <span class="sheet__num">0{{ links.length + 1 }}</span>
+        <span class="sheet__label">Writing</span>
+      </a>
     </nav>
   </div>
 </header>

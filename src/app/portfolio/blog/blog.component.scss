@@ -1,0 +1,106 @@
+:host { display: block; }
+
+.blog-page {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  padding-bottom: clamp(5rem, 10vw, 9rem);
+}
+
+.blog-page__header {
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.blog-page__back {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+}
+
+.blog-page__eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.blog-page__title {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.blog-page__title em {
+  font-style: italic;
+  color: var(--ember);
+}
+
+.blog-page__sub {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: var(--ink-soft);
+  max-width: 42rem;
+}
+
+/* coming soon card */
+.coming-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.coming-card__label {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-bottom: 1.75rem;
+}
+
+.coming-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.coming-card__list li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.coming-card__list li:last-child { border-bottom: none; padding-bottom: 0; }
+.coming-card__list li:first-child { padding-top: 0; }
+
+.coming-card__num {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-mute);
+  letter-spacing: 0.08em;
+  padding-top: 0.2rem;
+}
+
+.coming-card__post-title {
+  font-family: var(--display);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.coming-card__post-sub {
+  font-size: 0.88rem;
+  color: var(--ink-mute);
+  line-height: 1.55;
+}
+
+@media (max-width: 520px) {
+  .coming-card__list li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .coming-card__num { display: none; }
+}

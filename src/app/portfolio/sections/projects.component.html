@@ -1,0 +1,42 @@
+<section class="section projects" id="projects">
+  <div class="wrap">
+    <div class="section-head" [appReveal]="0">
+      <span class="idx">04</span>
+      <span class="kicker">Projects</span>
+    </div>
+
+    <h2 class="section-title projects__title" [appReveal]="60">
+      Things I've <em>built</em><br />worth talking about.
+    </h2>
+
+    <div class="proj__grid">
+      @for (project of projects; track project.title; let i = $index) {
+        <article class="proj-card" [appReveal]="i * 80">
+          <div class="proj-card__top">
+            @if (project.badge) {
+              <span class="proj-card__badge">{{ project.badge }}</span>
+            }
+            <h3 class="proj-card__title">{{ project.title }}</h3>
+          </div>
+
+          <p class="proj-card__desc">{{ project.description }}</p>
+
+          <footer class="proj-card__foot">
+            <ul class="proj-tags">
+              @for (tag of project.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+            @if (project.link) {
+              <a class="proj-card__link link-u" [href]="project.link" target="_blank" rel="noopener">
+                {{ project.linkLabel ?? 'View' }} ↗
+              </a>
+            }
+          </footer>
+
+          <span class="proj-card__rule" aria-hidden="true"></span>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -5,6 +5,7 @@ import {
   OnDestroy,
   signal,
 } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 interface NavLink {
   id: string;
@@ -14,6 +15,7 @@ interface NavLink {
 @Component({
   selector: 'app-nav',
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
@@ -22,6 +24,7 @@ export class NavComponent implements AfterViewInit, OnDestroy {
     { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'stack', label: 'Tech Stack' },
+    { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ];
 

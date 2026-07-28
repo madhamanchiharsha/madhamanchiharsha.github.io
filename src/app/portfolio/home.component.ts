@@ -3,6 +3,7 @@ import { HeroComponent } from './sections/hero.component';
 import { AboutComponent } from './sections/about.component';
 import { ExperienceComponent } from './sections/experience.component';
 import { TechComponent } from './sections/tech.component';
+import { ProjectsComponent } from './sections/projects.component';
 import { ContactComponent } from './sections/contact.component';
 
 @Component({
@@ -13,6 +14,7 @@ import { ContactComponent } from './sections/contact.component';
     AboutComponent,
     ExperienceComponent,
     TechComponent,
+    ProjectsComponent,
     ContactComponent,
   ],
   template: `
@@ -20,6 +22,7 @@ import { ContactComponent } from './sections/contact.component';
     <app-about />
     <app-experience />
     <app-tech />
+    <app-projects />
     <app-contact />
   `,
 })
